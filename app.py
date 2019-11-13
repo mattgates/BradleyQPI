@@ -1,0 +1,31 @@
+from flask import Flask, render_template
+import pyodbc
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+	return render_template('home.html')
+
+@app.route('/schedule')
+def schedule():
+	return render_template('schedule.html')
+
+@app.route('/swapdrop')
+def swapdrop():
+	return render_template('swapdrop.html')
+
+@app.route('/vacation')
+def vacation():
+	return render_template('vacation.html')
+
+@app.route('/notifications')
+def notifications():
+	return render_template('notifications.html')
+
+@app.route('/settings')
+def settings():
+	return render_template('settings.html')
+	
+if __name__ == '__main__':
+	app.run(debug=True)#
