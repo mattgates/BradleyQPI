@@ -13,41 +13,31 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
     <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+    .btn.btn-outline-secondary{
+        background-color: #158cba
+    }
+    
+    </style> 
 </head>
 
 <body>
-
 
     <div class="list-group pt-2 text-white">
         <a class="list-group-item list-group-item-action flex-column align-items-start active">
             <div class="d-flex w-100 justify-content-between">
                 <h3 class="mb-1">Request Vacation</h3>
             </div>
-            <hr class="my-1">
+        </a>
+    </div>
 
-            <p class="mb-1"> Start Date: <input id="startDate" width="276" />
-            </p>
-            <p class="mb-1"> Start Time: </p>
-            <div class="form-group">
-                <select class="custom-select" style="width:276px;">
-                    <option selected="">Full Day</option>
-                    <option value="1">6:00 am</option>
-                    <option value="2">7:00 am</option>
-                    <option value="3">8:00 am</option>
-                    <option value="4">9:00 am</option>
-                    <option value="5">10:00 am</option>
-                    <option value="6">11:00 am</option>
-                    <option value="7">12:00 pm</option>
-                    <option value="8">1:00 pm</option>
-                    <option value="9">2:00 pm</option>
-                    <option value="10">3:00 pm</option>
-                    <option value="11">4:00 pm</option>
-                    <option value="12">5:00 pm</option>
-
-                </select>
-            </div>
-            <p class="mb-1"> End Date: <input id="endDate" width="276" />
-                <p class="mb-1"> End Time: </p>
+    <div class="jumbotron" style="padding: 2rem 2rem;">
+            <tr class="table-default">
+                <p class=""> Start Date: <input id="startDate" width="276"/>
+                </p>
+                <p class="mb-1"> Start Time: </p>
                 <div class="form-group">
                     <select class="custom-select" style="width:276px;">
                         <option selected="">Full Day</option>
@@ -63,15 +53,37 @@
                         <option value="10">3:00 pm</option>
                         <option value="11">4:00 pm</option>
                         <option value="12">5:00 pm</option>
+
                     </select>
                 </div>
-            </p>
-            <button type="button" class="btn btn-secondary" style="width:75px;">Submit</button>
+                &nbsp;
+                <p class="mb-1"> End Date: <input id="endDate" width="276" />
+                    <p class="mb-1"> End Time: </p>
+                    <div class="form-group">
+                        <select class="custom-select" style="width:276px;">
+                            <option selected="">Full Day</option>
+                            <option value="1">6:00 am</option>
+                            <option value="2">7:00 am</option>
+                            <option value="3">8:00 am</option>
+                            <option value="4">9:00 am</option>
+                            <option value="5">10:00 am</option>
+                            <option value="6">11:00 am</option>
+                            <option value="7">12:00 pm</option>
+                            <option value="8">1:00 pm</option>
+                            <option value="9">2:00 pm</option>
+                            <option value="10">3:00 pm</option>
+                            <option value="11">4:00 pm</option>
+                            <option value="12">5:00 pm</option>
+                        </select>
+                    </div>
+                </p>
+                <br>
+                <button type="button" class="btn btn-secondary" style="width:75px;" >Submit</button>
 
-        </a>
+            </tr>
 
+        
     </div>
-
     <script>
         var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
         $('#startDate').datepicker({

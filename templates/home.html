@@ -1,13 +1,78 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<div class = "jumbotron text-center">
-	<h1>My Shifts</h1>
-	<p class = "lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+
+<head>
+	<style>
+		td {
+			width: 150px;
+			padding: 5px
+		}
+	</style>
+</head>
+
+<body>
+	<div class="list-group pt-2 text-white">
+		<a class="list-group-item list-group-item-action flex-column align-items-start active">
+			<div class="d-flex w-100 justify-content-between">
+				<h3 class="mb-1">My Shifts</h3>
+			</div>
+			<p style="margin-block-end: 0em;">Total Hours: <span class="badge badge-pill badge-secondary">25</span></p>
+		</a>
+	</div>
+	<div class="jumbotron" style="padding: 1rem 2rem;">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a style="color: #158cba">Monday 11/4</a>
+			</h4>
+		</div>
+		<table>
+			<thead>
+				<tr class="table-default">
+					<td>6:00 am - 11:00 am</td>
+					<td>Part Time Morning</td>
+				</tr>
+				<tr class="table-default">
+					<td>9:00 am - 2:00 pm</td>
+					<td>Part Time Mid-Morning</td>
+				</tr>
+				</tbody>
+		</table>
+		<br>
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a style="color: #158cba">Tuesday 11/5</a>
+			</h4>
+		</div>
+		<table>
+			<thead>
+				<tr class="table-default">
+					<td>6:00 am - 11:00 am</td>
+					<td>Part Time Morning</td>
+				</tr>
+				<tr class="table-default">
+					<td>9:00 am - 2:00 pm</td>
+					<td>Part Time Mid-Morning</td>
+				</tr>
+				</tbody>
+		</table>
+		<br>
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a style="color: #158cba">Thursday 11/7</a>
+			</h4>
+		</div>
+		<table>
+			<thead>
+				<tr class="table-default">
+					<td>6:00 am - 11:00 am</td>
+					<td>Part Time Morning</td>
+				</tr>
+				</tbody>
+		</table>
+
+
+
+	</div>
+</body>
 {% endblock %}
