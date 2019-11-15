@@ -2,21 +2,31 @@
 
 {% block body %}
 
+<head>
+	<style>
+		td {
+			padding: 10px;
+			padding-right: 10px;
+		}
+	</style>
+</head>
+
+
 <div class="list-group pt-2 text-white">
-  <a class="list-group-item list-group-item-action flex-column align-items-start active">
-    <div class="d-flex w-100 justify-content-between">
-      <h3 class="mb-1">Shift Selector</h3>
-    </div>
-      <hr class="my-1">
+	<a class="list-group-item list-group-item-action flex-column align-items-start active">
+		<div class="d-flex w-100 justify-content-between">
+			<h3 class="mb-1">Shift Selector</h3>
+		</div>
+		<hr class="my-1">
 
-     <p class="mb-1">Role: Part Time</p>
-     <p class="float-right">Total Hours: <span class="badge badge-pill badge-secondary">0</span></p>
-     <p class="mb-1">Position: Line Lead</p>
-    <!-- <p class="mb-1">Role: Part Time<p class="float-right">Total Hours: </p></p> -->
-    <!-- <p class="mb-1">Position: Line Lead<span class="badge badge-pill badge-secondary float-right">test</span></p> -->
+		<p class="mb-1">Role: Part Time</p>
+		<p class="float-right">Total Hours: <span class="badge badge-pill badge-secondary">0</span></p>
+		<p class="mb-1">Position: Line Lead</p>
+		<!-- <p class="mb-1">Role: Part Time<p class="float-right">Total Hours: </p></p> -->
+		<!-- <p class="mb-1">Position: Line Lead<span class="badge badge-pill badge-secondary float-right">test</span></p> -->
 
-  </a>
-  <!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+	</a>
+	<!-- <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1">List group item heading</h5>
       <small class="text-muted">3 days ago</small>
@@ -26,233 +36,264 @@
   </a> -->
 </div>
 <div class="jumbotron" style="padding: 2rem 2rem;">
-  <div class="panel-group">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse1">Monday 11/4</a>
-        </h4>
-	  </div>
-      <div id="collapse1" class="panel-collapse collapse">
-        <table>
-        	<thead>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck1">
-                  			<label class="custom-control-label" for="customCheck1"></label>
-             			</div>
-  					</td>
-		  			<td>6:00 am - 11:00 am</td>
-		  			<td>Part Time Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck2">
-                  			<label class="custom-control-label" for="customCheck2"></label>
-             			</div>
-  					</td>
-		  			<td>9:00 am - 2:00 pm</td>
-		  			<td>Part Time Mid-Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck3">
-                  			<label class="custom-control-label" for="customCheck3"></label>
-             			</div>
-  					</td>
-		  			<td>11:30 am - 4:30 pm</td>
-		  			<td>Part Time Afternoon</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck4">
-                  			<label class="custom-control-label" for="customCheck4"></label>
-             			</div>
-  					</td>
-		  			<td>5:00 pm - 10:00 pm</td>
-		  			<td>Part Time Evening</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        	</tbody>
-        </table>
-	  </div>
-	  <br>
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse2">Tuesday 11/5</a>
-        </h4>
-      </div>
-      <div id="collapse2" class="panel-collapse collapse">
-        <table>
-        	<thead>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck5">
-                  			<label class="custom-control-label" for="customCheck5"></label>
-             			</div>
-  					</td>
-		  			<td>6:00 am - 11:00 am</td>
-		  			<td>Part Time Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck6">
-                  			<label class="custom-control-label" for="customCheck6"></label>
-             			</div>
-  					</td>
-		  			<td>9:00 am - 2:00 pm</td>
-		  			<td>Part Time Mid-Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck7">
-                  			<label class="custom-control-label" for="customCheck7"></label>
-             			</div>
-  					</td>
-		  			<td>11:30 am - 4:30 pm</td>
-		  			<td>Part Time Afternoon</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck8">
-                  			<label class="custom-control-label" for="customCheck8"></label>
-             			</div>
-  					</td>
-		  			<td>5:00 pm - 10:00 pm</td>
-		  			<td>Part Time Evening</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        	</tbody>
-        </table>
-	  </div>
-	  <br>
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse3">Wednesday 11/6</a>
-        </h4>
-      </div>
-      <div id="collapse3" class="panel-collapse collapse">
-        <table>
-        	<thead>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck9">
-                  			<label class="custom-control-label" for="customCheck9"></label>
-             			</div>
-  					</td>
-		  			<td>6:00 am - 11:00 am</td>
-		  			<td>Part Time Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck10">
-                  			<label class="custom-control-label" for="customCheck10"></label>
-             			</div>
-  					</td>
-		  			<td>9:00 am - 2:00 pm</td>
-		  			<td>Part Time Mid-Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck11">
-                  			<label class="custom-control-label" for="customCheck11"></label>
-             			</div>
-  					</td>
-		  			<td>11:30 am - 4:30 pm</td>
-		  			<td>Part Time Afternoon</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-default">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck12">
-                  			<label class="custom-control-label" for="customCheck12"></label>
-             			</div>
-  					</td>
-		  			<td>5:00 pm - 10:00 pm</td>
-		  			<td>Part Time Evening</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        	</tbody>
-        </table>
-	  </div>
-	  <br>
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapse4">Thursday 11/7</a>
-        </h4>
-      </div>
-      <div id="collapse4" class="panel-collapse collapse">
-        <table>
-        	<thead>
-        		<tr class="table-primary">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck13">
-                  			<label class="custom-control-label" for="customCheck13"></label>
-             			</div>
-  					</td>
-		  			<td>6:00 am - 11:00 am</td>
-		  			<td>Part Time Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-primary">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck14">
-                  			<label class="custom-control-label" for="customCheck14"></label>
-             			</div>
-  					</td>
-		  			<td>9:00 am - 2:00 pm</td>
-		  			<td>Part Time Mid-Morning</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-primary">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck15">
-                  			<label class="custom-control-label" for="customCheck15"></label>
-             			</div>
-  					</td>
-		  			<td>11:30 am - 4:30 pm</td>
-		  			<td>Part Time Afternoon</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        		<tr class="table-primary">
-		  			<td>
-  						<div class="custom-control custom-checkbox">
-                  			<input type="checkbox" class="custom-control-input" id="customCheck16">
-                  			<label class="custom-control-label" for="customCheck16"></label>
-             			</div>
-  					</td>
-		  			<td>5:00 pm - 10:00 pm</td>
-		  			<td>Part Time Evening</td>
-		  			<td>Spots Left: 10</td>
-        		</tr>
-        	</tbody>
-        </table>
-      </div>
-  </div>
+	<div class="panel-group">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse1">Monday 11/4</a>
+			</h4>
+		</div>
+		<div id="collapse1" class="panel-collapse collapse">
+			<table cellspacing="10">
+				<thead>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck1">
+								<label class="custom-control-label" for="customCheck1"></label>
+							</div>
+						</td>
+						<td>6:00 am - 11:00 am</td>
+						<td>Part Time Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck2">
+								<label class="custom-control-label" for="customCheck2"></label>
+							</div>
+						</td>
+						<td>9:00 am - 2:00 pm</td>
+						<td>Part Time Mid-Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck3">
+								<label class="custom-control-label" for="customCheck3"></label>
+							</div>
+						</td>
+						<td>11:30 am - 4:30 pm</td>
+						<td>Part Time Afternoon</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck4">
+								<label class="custom-control-label" for="customCheck4"></label>
+							</div>
+						</td>
+						<td>5:00 pm - 10:00 pm</td>
+						<td>Part Time Evening</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					</tbody>
+			</table>
+		</div>
+		<br>
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse2">Tuesday 11/5</a>
+			</h4>
+		</div>
+		<div id="collapse2" class="panel-collapse collapse">
+			<table>
+				<thead>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck5">
+								<label class="custom-control-label" for="customCheck5"></label>
+							</div>
+						</td>
+						<td>6:00 am - 11:00 am</td>
+						<td>Part Time Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck6">
+								<label class="custom-control-label" for="customCheck6"></label>
+							</div>
+						</td>
+						<td>9:00 am - 2:00 pm</td>
+						<td>Part Time Mid-Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck7">
+								<label class="custom-control-label" for="customCheck7"></label>
+							</div>
+						</td>
+						<td>11:30 am - 4:30 pm</td>
+						<td>Part Time Afternoon</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck8">
+								<label class="custom-control-label" for="customCheck8"></label>
+							</div>
+						</td>
+						<td>5:00 pm - 10:00 pm</td>
+						<td>Part Time Evening</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					</tbody>
+			</table>
+		</div>
+		<br>
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse3">Wednesday 11/6</a>
+			</h4>
+		</div>
+		<div id="collapse3" class="panel-collapse collapse">
+			<table>
+				<thead>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck9">
+								<label class="custom-control-label" for="customCheck9"></label>
+							</div>
+						</td>
+						<td>6:00 am - 11:00 am</td>
+						<td>Part Time Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck10">
+								<label class="custom-control-label" for="customCheck10"></label>
+							</div>
+						</td>
+						<td>9:00 am - 2:00 pm</td>
+						<td>Part Time Mid-Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck11">
+								<label class="custom-control-label" for="customCheck11"></label>
+							</div>
+						</td>
+						<td>11:30 am - 4:30 pm</td>
+						<td>Part Time Afternoon</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck12">
+								<label class="custom-control-label" for="customCheck12"></label>
+							</div>
+						</td>
+						<td>5:00 pm - 10:00 pm</td>
+						<td>Part Time Evening</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					</tbody>
+			</table>
+		</div>
+		<br>
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse4">Thursday 11/7</a>
+			</h4>
+		</div>
+		<div id="collapse4" class="panel-collapse collapse">
+			<table>
+				<thead>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck13">
+								<label class="custom-control-label" for="customCheck13"></label>
+							</div>
+						</td>
+						<td>6:00 am - 11:00 am</td>
+						<td>Part Time Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck14">
+								<label class="custom-control-label" for="customCheck14"></label>
+							</div>
+						</td>
+						<td>9:00 am - 2:00 pm</td>
+						<td>Part Time Mid-Morning</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck15">
+								<label class="custom-control-label" for="customCheck15"></label>
+							</div>
+						</td>
+						<td>11:30 am - 4:30 pm</td>
+						<td>Part Time Afternoon</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					<tr class="table-default">
+						<td>
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input" id="customCheck16">
+								<label class="custom-control-label" for="customCheck16"></label>
+							</div>
+						</td>
+						<td>5:00 pm - 10:00 pm</td>
+						<td>Part Time Evening</td>
+						<td>Spots Left: 10</td>
+					</tr>
+					</tbody>
+			</table>
+		</div>
+	</div>
+<br>
+<br>
+<button type="button" class="btn btn-primary" id="availShift" data-toggle="modal" data-target="#myModal">Submit</button>
+
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Confirm Shifts</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<fieldset class="form-group">
+					<h5>11/15/19 5:00PM - 10:00PM </h5>
+					<h5>11/17/19 5:00PM - 10:00PM </h5>
+					<h5>11/18/19 5:00PM - 10:00PM </h5>
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">Confirm</button>
+			</div>
+		</div>
+	</div>
 </div>
+
 </div>
+
+
+
+
+
 <!-- <div class="container">
   <h1 class="text-center">Shift Selector</h1>
   <table class="table table-hover">
