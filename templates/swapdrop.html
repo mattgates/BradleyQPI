@@ -12,11 +12,11 @@
 	<div class="form-group">
 		<label for="dropShift1">Select Shift to Drop</label>
 		<select class="form-control" id="dropShift1" style="width:500px">
-		  <option>Shift 1</option>
-		  <option>Shift 2</option>
-		  <option>Shift 3</option>
-		  <option>Shift 4</option>
-		  <option>Shift 5</option>
+		  <option>11/15/19 6:00AM - 11:00am</option>
+		  <option>11/16/19 6:00AM - 11:00am</option>
+		  <option>11/18/19 6:00AM - 11:00am</option>
+		  <option>11/19/19 6:00AM - 11:00am</option>
+		  <option>11/20/19 6:00AM - 11:00am</option>
 		</select>
 	  </div>
 	
@@ -24,26 +24,28 @@
 	
 	  <br>
 	  <br>
+	  <br>
+	  <br>
 
 	  <div class="form-group">
 		<label for="swapShift1">Select Shift to Swap</label>
 		<select class="form-control" id="swapShift1" style="width:500px">
-		  <option>Shift 1</option>
-		  <option>Shift 2</option>
-		  <option>Shift 3</option>
-		  <option>Shift 4</option>
-		  <option>Shift 5</option>
+			<option>11/15/19 6:00AM - 11:00am</option>
+			<option>11/16/19 6:00AM - 11:00am</option>
+			<option>11/18/19 6:00AM - 11:00am</option>
+			<option>11/19/19 6:00AM - 11:00am</option>
+			<option>11/20/19 6:00AM - 11:00am</option>
 		</select>
 	  </div>
 	
 	  <div class="form-group">
 		<label for="swapShift2">Select Employee to Swap with</label>
 		<select class="form-control" id="swapShift2" style="width:500px" style="text-align: center;">
-		  <option>Employee 1</option>
-		  <option>Employee 2</option>
-		  <option>Employee 3</option>
-		  <option>Employee 4</option>
-		  <option>Employee 5</option>
+		  <option>Cramer, Suzie</option>
+		  <option>Drake, Will</option>
+		  <option>Lang, Katie</option>
+		  <option>Miller, Nick</option>
+		  <option>Winston, Bishop</option>
 		</select>
 	  </div>
 	
@@ -53,36 +55,38 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 
-	<div class="modal" id="myModal">
+	<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 		  <div class="modal-content">
 			<div class="modal-header">
-			  <h5 class="modal-title">Modal titleSelect an Available Shift</h5>
+			  <h5 class="modal-title">Select an Available Shift</h5>
 			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			  </button>
 			</div>
-			<fieldset class="form-group">
-				<div class="form-check">
-				  <label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-					&nbsp;&nbsp;&nbsp;&nbsp;Shift 1
-				  </label>
-				</div>
-				<legend>Employee 1</legend>
-				<div class="form-check">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-					&nbsp;&nbsp;&nbsp;&nbsp;Shift 2
-				  </label>
-				</div>
-				<div class="form-check disabled">
-				<label class="form-check-label">
-					<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
-					&nbsp;&nbsp;&nbsp;&nbsp;Shift 3
-				  </label>
-				</div>
-			  </fieldset>
+			<div class="modal-body">
+				<fieldset class="form-group">
+					<div class="form-check">
+					  <label class="form-check-label">
+						<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+						&nbsp;&nbsp;&nbsp;&nbsp;11/15/19 5:00PM - 10:00PM
+					  </label>
+					</div>
+					<legend>Cramer, Suzie</legend>
+					<div class="form-check">
+					<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+						&nbsp;&nbsp;&nbsp;&nbsp;11/17/19 5:00PM - 10:00PM
+					  </label>
+					</div>
+					<div class="form-check disabled">
+					<label class="form-check-label">
+						<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+						&nbsp;&nbsp;&nbsp;&nbsp;11/18/19 5:00PM - 10:00PM
+					  </label>
+					</div>
+				  </fieldset>
+			  </div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
 				<button type="button" class="btn btn-primary">Request Swap</button>
