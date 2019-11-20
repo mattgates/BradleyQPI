@@ -2,7 +2,7 @@
 
 {% block body %}
 
-
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,16 +11,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 
-    <style>
-    .btn.btn-outline-secondary{
-        background-color: #158cba
-    }
-    
-    </style> 
 </head>
 
 <body>
@@ -34,74 +27,119 @@
     </div>
 
     <div class="jumbotron" style="padding: 2rem 2rem;">
-            <tr class="table-default">
-                <p class=""> Start Date: <input id="startDate" width="276"/>
-                </p>
-                <p class="mb-1"> Start Time: </p>
-                <div class="form-group">
-                    <select class="custom-select" style="width:276px;">
-                        <option selected="">Full Day</option>
-                        <option value="1">6:00 am</option>
-                        <option value="2">7:00 am</option>
-                        <option value="3">8:00 am</option>
-                        <option value="4">9:00 am</option>
-                        <option value="5">10:00 am</option>
-                        <option value="6">11:00 am</option>
-                        <option value="7">12:00 pm</option>
-                        <option value="8">1:00 pm</option>
-                        <option value="9">2:00 pm</option>
-                        <option value="10">3:00 pm</option>
-                        <option value="11">4:00 pm</option>
-                        <option value="12">5:00 pm</option>
 
-                    </select>
-                </div>
-                &nbsp;
-                <p class="mb-1"> End Date: <input id="endDate" width="276" />
-                    <p class="mb-1"> End Time: </p>
-                    <div class="form-group">
-                        <select class="custom-select" style="width:276px;">
-                            <option selected="">Full Day</option>
-                            <option value="1">6:00 am</option>
-                            <option value="2">7:00 am</option>
-                            <option value="3">8:00 am</option>
-                            <option value="4">9:00 am</option>
-                            <option value="5">10:00 am</option>
-                            <option value="6">11:00 am</option>
-                            <option value="7">12:00 pm</option>
-                            <option value="8">1:00 pm</option>
-                            <option value="9">2:00 pm</option>
-                            <option value="10">3:00 pm</option>
-                            <option value="11">4:00 pm</option>
-                            <option value="12">5:00 pm</option>
-                        </select>
+        <div> Select Date(s) to Request Off: </div>
+        <input type="text" name="daterange" style="width:200px; border-radius: 0.25rem" style="text-align: center;" />
+        <br>
+        <form class="form-group" style="display: none" id="DaysOff">
+            <div style="padding: 15px 0px 0px 0px;"> Please choose the duration: </div>
+            <select class="form-control" id="HalfFull" style="width:200px" style="text-align: center; display:none">
+                <option selected="">Select One</option>
+                <option value="1">Half Day AM</option>
+                <option value="2">Half Day PM</option>
+                <option value="3">Full Day</option>
+            </select>
+        </form>
+        <div id="numDays" style="padding: 15px 0px;"> </div>
+        <br>
+        <button type="button" id="submitBtn" class="btn btn-primary" disabled=true  data-toggle="modal" data-target="#myModal">Request Vacation </button>
+
+        <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Confirm Vacation Request</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <fieldset class="form-group">
+                                <div id="RangeSelected1"></div>
+                                <div id="RangeSelected2"></div>
+                                <div id="RangeSelected3"></div>
+
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Confirm</button>
+                        </div>
                     </div>
-                </p>
-                <br>
-                <button type="button" class="btn btn-secondary" style="width:75px;" >Submit</button>
+                </div>
+            </div>
 
-            </tr>
 
-        
+
+
+        <script>
+            $(function () {
+                var days = 0
+                $('input[name="daterange"]').daterangepicker({
+                    opens: 'right',
+                    startDate: moment().add(7, 'days'),
+                    endDate: moment().add(7, 'days'),
+                    minDate: moment().add(7, 'days'),
+                    showDropdowns: true,
+
+
+                },  
+                $('input[name="daterange"]').on('apply.daterangepicker', function (ev, picker) {
+                        document.getElementById("DaysOff").style.display = "none";
+
+                        days = picker.endDate.diff(picker.startDate, 'days');
+                        console.log("The difference is =", days);
+                        start = picker.startDate.format("MM-DD-YYYY ");
+                        end = picker.endDate.format("MM-DD-YYYY");
+
+                        if (days == 0) {
+                            document.getElementById("DaysOff").style.display = "block";
+                            $("#HalfFull").on("change", function (e) {
+                                console.log("Clicked");
+                                var selected = $("#HalfFull option:selected").text();
+                                console.log(selected);
+                                if (selected == "Half Day AM" || selected == "Half Day PM") {
+                                    days = 0.5;
+                                    document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
+                                }
+                                else if (selected == "Full Day") {
+                                    days = 1;
+                                    document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
+                                }
+                                document.getElementById('RangeSelected1').innerHTML = "Date: " + start;
+                                document.getElementById('RangeSelected2').innerHTML = "Time: " + selected;
+                                document.getElementById('RangeSelected3').innerHTML = "Number of Days: " + days;
+
+                            });
+                        } else {
+                            days = days + 1;
+                            document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
+                            document.getElementById('RangeSelected1').innerHTML = "Start Date: " + start;
+                            document.getElementById('RangeSelected2').innerHTML = "End Date: " + end;
+                            document.getElementById('RangeSelected3').innerHTML = "Number of Days: " + days;
+
+
+                        }
+
+                        if (days != 0) {
+                            document.getElementById('submitBtn').disabled = false;
+                        }
+
+                }) )
+
+            });
+
+        </script>
+        <br>
+        <br>
+        <br>
+
+
     </div>
-    <script>
-        var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        $('#startDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: today,
-            maxDate: function () {
-                return $('#endDate').val();
-            }
-        });
-        $('#endDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: function () {
-                return $('#startDate').val();
-            }
-        });
-    </script>
+
+
+
+
+
 </body>
 
 </html>

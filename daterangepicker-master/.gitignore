@@ -1,0 +1,11 @@
+bower_components
+node_modules
+npm-debug.log
+*.sublime-workspace
+*.sublime-project
+*.sw[onp]
+example 
+website
+demo.html
+README.md
+bower.json
