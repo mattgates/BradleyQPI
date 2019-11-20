@@ -10,9 +10,13 @@ def home():
 def schedule():
 	return render_template('schedule.html')
 
-@app.route('/swapdrop')
-def swapdrop():
-	return render_template('swapdrop.html')
+@app.route('/swap')
+def swap():
+	return render_template('swap.html')
+
+@app.route('/drop')
+def drop():
+	return render_template('drop.html')
 
 @app.route('/vacation')
 def vacation():
