@@ -13,11 +13,31 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
 
 </head>
 
 <body>
-
     <div class="list-group pt-2 text-white">
         <a class="list-group-item list-group-item-action flex-column align-items-start active">
             <div class="d-flex w-100 justify-content-between">
@@ -26,117 +46,173 @@
         </a>
     </div>
 
-    <div class="jumbotron" style="padding: 2rem 2rem;">
+    <div class="jumbotron" style="padding: 0rem 2rem;">
 
-        <div> Select Date(s) to Request Off: </div>
-        <input type="text" name="daterange" style="width:200px; border-radius: 0.25rem" style="text-align: center;" />
-        <br>
-        <form class="form-group" style="display: none" id="DaysOff">
-            <div style="padding: 15px 0px 0px 0px;"> Please choose the duration: </div>
-            <select class="form-control" id="HalfFull" style="width:200px" style="text-align: center; display:none">
-                <option selected="">Select One</option>
-                <option value="1">Half Day AM</option>
-                <option value="2">Half Day PM</option>
-                <option value="3">Full Day</option>
-            </select>
-        </form>
-        <div id="numDays" style="padding: 15px 0px;"> </div>
-        <br>
-        <button type="button" id="submitBtn" class="btn btn-primary" disabled=true  data-toggle="modal" data-target="#myModal">Request Vacation </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div style="padding-top:2rem;"> Select Date(s) to Request Off: </div>
+                    <input type="text" name="daterange"
+                        style="width:200px; border-radius: 0.25rem; padding-left:15px; height: 35px" />
+                    <br>
+                    <form class="form-group" style="display: none" id="DaysOff">
+                        <div style="padding: 15px 0px 0px 0px;"> Please choose the duration: </div>
+                        <select class="form-control" id="HalfFull" style="width:200px"
+                            style="text-align: left; display:none">
+                            <option selected="">Select One</option>
+                            <option value="1">Half Day AM</option>
+                            <option value="2">Half Day PM</option>
+                            <option value="3">Full Day</option>
+                        </select>
+                    </form>
+                    <div id="numDays" style="padding: 15px 0px;"> </div>
+                    <br>
+                    <button type="button" id="submitBtn" class="btn btn-primary" disabled=true data-toggle="modal"
+                        data-target="#myModal">Request Vacation </button>
 
-        <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Confirm Vacation Request</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <fieldset class="form-group">
-                                <div id="RangeSelected1"></div>
-                                <div id="RangeSelected2"></div>
-                                <div id="RangeSelected3"></div>
+                    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Confirm Vacation Request</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <fieldset class="form-group">
+                                        <div id="RangeSelected1"></div>
+                                        <div id="RangeSelected2"></div>
+                                        <div id="RangeSelected3"></div>
+                                        <div id="RangeSelected4"> Days Remaining: </div>
 
-                            </fieldset>
+                                    </fieldset>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Confirm</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Confirm</button>
-                        </div>
+                    </div>
+
+                    <script>
+                        $(function () {
+                            $('input[name="daterange"]').daterangepicker({
+                                opens: 'right',
+                                startDate: moment().add(7, 'days'),
+                                endDate: moment().add(7, 'days'),
+                                minDate: moment().add(7, 'days'),
+                                showDropdowns: true,
+
+
+                            },
+                                $('input[name="daterange"]').on('apply.daterangepicker', function (ev, picker) {
+                                    //clear all selections 
+                                    $('#HalfFull').prop('selectedIndex', 0);
+                                    document.getElementById("numDays").innerHTML = "";
+                                    document.getElementById("DaysOff").style.display = "none";
+                                    //determine number of days requesting off 
+                                    var days = picker.endDate.diff(picker.startDate, 'days');
+                                    console.log("The difference is =", days);
+                                    start = picker.startDate.format("MM-DD-YYYY ");
+                                    end = picker.endDate.format("MM-DD-YYYY");
+
+                                    if (days == 0) {
+                                        document.getElementById("DaysOff").style.display = "block";
+                                        $("#HalfFull").on("change", function (e) {
+                                            selected = $("#HalfFull option:selected").text();
+                                            console.log(selected);
+                                            if (selected == "Half Day AM" || selected == "Half Day PM") {
+                                                days = 0.5;
+                                                document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
+                                            }
+                                            else if (selected == "Full Day") {
+                                                days = 1;
+                                                document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
+                                            }
+                                            document.getElementById('RangeSelected1').innerHTML = "Date: " + start;
+                                            document.getElementById('RangeSelected2').innerHTML = "Time: " + selected;
+                                            document.getElementById('RangeSelected3').innerHTML = "Number of Days: " + days;
+                                            document.getElementById('submitBtn').disabled = false;
+                                        });
+                                    }
+                                    else {
+                                        days = days + 1;
+                                        document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
+                                        document.getElementById('RangeSelected1').innerHTML = "Start Date: " + start;
+                                        document.getElementById('RangeSelected2').innerHTML = "End Date: " + end;
+                                        document.getElementById('RangeSelected3').innerHTML = "Number of Days: " + days;
+                                        document.getElementById('submitBtn').disabled = false;
+                                    }
+                                }))
+
+                        });
+
+                    </script>
+
+                </div>
+                <div class="col-sm" style="padding-top:2rem">
+                    <div class="card text-black bg-secondary mb-3" style="padding: 10px 15px ">
+                        <div style="font-size:16px"> <b> Requested Days Off </b></div>
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> Start Date </th>
+                                    <th scope="col"> End Date </th>
+                                    <th scope="col"> Time </th>
+                                    <th scope="col"> Number of Days </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 12-20-2019</td>
+                                    <td> 12-22-2019</td>
+                                    <td> N/A </td>
+                                    <td> 3 </td>
+                                </tr>
+                                <tr>
+                                    <td> 02-15-2020</td>
+                                    <td> 02-15-2020</td>
+                                    <td> Half Day AM </td>
+                                    <td> 0.5 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="font-size:16px"> <b> Approved Days Off </b></div>
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> Start Date </th>
+                                    <th scope="col"> End Date </th>
+                                    <th scope="col"> Time </th>
+                                    <th scope="col"> Number of Days </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 11-26-2019</td>
+                                    <td> 12-29-2019</td>
+                                    <td> N/A </td>
+                                    <td> 4 </td>
+                                </tr>
+                                <tr>
+                                    <td> 01-20-2020</td>
+                                    <td> 01-20-2020</td>
+                                    <td> Half Day PM </td>
+                                    <td> 0.5 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="card-title" style="font-size:14px"> <b> Vacation Days Left for 2019:</b> 10 </div>
+                        <div class="card-title" style="font-size:14px"> <b> Vacation Days Left for 2020:</b> 15 </div>
+
                     </div>
                 </div>
             </div>
-
-
-
-
-        <script>
-            $(function () {
-                var days = 0
-                $('input[name="daterange"]').daterangepicker({
-                    opens: 'right',
-                    startDate: moment().add(7, 'days'),
-                    endDate: moment().add(7, 'days'),
-                    minDate: moment().add(7, 'days'),
-                    showDropdowns: true,
-
-
-                },  
-                $('input[name="daterange"]').on('apply.daterangepicker', function (ev, picker) {
-                        document.getElementById("DaysOff").style.display = "none";
-
-                        days = picker.endDate.diff(picker.startDate, 'days');
-                        console.log("The difference is =", days);
-                        start = picker.startDate.format("MM-DD-YYYY ");
-                        end = picker.endDate.format("MM-DD-YYYY");
-
-                        if (days == 0) {
-                            document.getElementById("DaysOff").style.display = "block";
-                            $("#HalfFull").on("change", function (e) {
-                                console.log("Clicked");
-                                var selected = $("#HalfFull option:selected").text();
-                                console.log(selected);
-                                if (selected == "Half Day AM" || selected == "Half Day PM") {
-                                    days = 0.5;
-                                    document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
-                                }
-                                else if (selected == "Full Day") {
-                                    days = 1;
-                                    document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
-                                }
-                                document.getElementById('RangeSelected1').innerHTML = "Date: " + start;
-                                document.getElementById('RangeSelected2').innerHTML = "Time: " + selected;
-                                document.getElementById('RangeSelected3').innerHTML = "Number of Days: " + days;
-
-                            });
-                        } else {
-                            days = days + 1;
-                            document.getElementById('numDays').innerHTML = "Number of Days Selected: " + days;
-                            document.getElementById('RangeSelected1').innerHTML = "Start Date: " + start;
-                            document.getElementById('RangeSelected2').innerHTML = "End Date: " + end;
-                            document.getElementById('RangeSelected3').innerHTML = "Number of Days: " + days;
-
-
-                        }
-
-                        if (days != 0) {
-                            document.getElementById('submitBtn').disabled = false;
-                        }
-
-                }) )
-
-            });
-
-        </script>
-        <br>
-        <br>
-        <br>
-
+        </div>
 
     </div>
-
-
 
 
 
