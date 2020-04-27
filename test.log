@@ -1,0 +1,273 @@
+User: Smith, John, Activity: log in, Date/Time :2020-02-26 15:23:22,443
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 11:43:53,267
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 11:44:51,830
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 11:44:51,857
+ * Restarting with stat:2020-02-27 11:44:51,859
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 11:44:52,193
+ * Debugger is active!:2020-02-27 11:44:52,215
+ * Debugger PIN: 508-979-655:2020-02-27 11:44:52,222
+127.0.0.1 - - [27/Feb/2020 11:45:15] "GET / HTTP/1.1" 200 -:2020-02-27 11:45:15,181
+127.0.0.1 - - [27/Feb/2020 11:45:16] "GET /favicon.ico HTTP/1.1" 404 -:2020-02-27 11:45:16,314
+127.0.0.1 - - [27/Feb/2020 11:45:54] "GET /schedule HTTP/1.1" 200 -:2020-02-27 11:45:54,746
+127.0.0.1 - - [27/Feb/2020 11:46:19] "GET /swap HTTP/1.1" 200 -:2020-02-27 11:46:19,509
+127.0.0.1 - - [27/Feb/2020 11:46:32] "GET /drop HTTP/1.1" 200 -:2020-02-27 11:46:32,788
+127.0.0.1 - - [27/Feb/2020 11:46:45] "GET /vacation HTTP/1.1" 200 -:2020-02-27 11:46:45,273
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:07:08,100
+ * Restarting with stat:2020-02-27 12:07:08,234
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:09:38,700
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:09:38,737
+ * Restarting with stat:2020-02-27 12:09:38,739
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:09:39,005
+ * Debugger is active!:2020-02-27 12:09:39,021
+ * Debugger PIN: 508-979-655:2020-02-27 12:09:39,030
+127.0.0.1 - - [27/Feb/2020 12:09:49] "GET / HTTP/1.1" 500 -:2020-02-27 12:09:49,536
+127.0.0.1 - - [27/Feb/2020 12:09:49] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:09:49,742
+127.0.0.1 - - [27/Feb/2020 12:09:49] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:09:49,743
+127.0.0.1 - - [27/Feb/2020 12:09:49] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:09:49,743
+127.0.0.1 - - [27/Feb/2020 12:09:49] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:09:49,880
+127.0.0.1 - - [27/Feb/2020 12:09:49] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -:2020-02-27 12:09:49,916
+127.0.0.1 - - [27/Feb/2020 12:09:50] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:09:50,064
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:10:03,380
+ * Restarting with stat:2020-02-27 12:10:03,421
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:10:03,715
+ * Debugger is active!:2020-02-27 12:10:03,945
+ * Debugger PIN: 508-979-655:2020-02-27 12:10:03,952
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:10:10,944
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:10:11,066
+ * Restarting with stat:2020-02-27 12:10:11,067
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:10:11,295
+ * Debugger is active!:2020-02-27 12:10:11,407
+ * Debugger PIN: 508-979-655:2020-02-27 12:10:11,412
+127.0.0.1 - - [27/Feb/2020 12:10:15] "GET / HTTP/1.1" 500 -:2020-02-27 12:10:15,252
+127.0.0.1 - - [27/Feb/2020 12:10:15] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:10:15,391
+127.0.0.1 - - [27/Feb/2020 12:10:15] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:10:15,393
+127.0.0.1 - - [27/Feb/2020 12:10:15] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:10:15,393
+127.0.0.1 - - [27/Feb/2020 12:10:15] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:10:15,627
+127.0.0.1 - - [27/Feb/2020 12:10:37] "GET / HTTP/1.1" 500 -:2020-02-27 12:10:37,889
+127.0.0.1 - - [27/Feb/2020 12:10:38] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:10:38,024
+127.0.0.1 - - [27/Feb/2020 12:10:38] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:10:38,027
+127.0.0.1 - - [27/Feb/2020 12:10:38] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:10:38,030
+127.0.0.1 - - [27/Feb/2020 12:10:38] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:10:38,209
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:11:04,664
+ * Restarting with stat:2020-02-27 12:11:04,787
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:11:05,204
+ * Debugger is active!:2020-02-27 12:11:05,332
+ * Debugger PIN: 508-979-655:2020-02-27 12:11:05,339
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:11:08,786
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:11:08,905
+ * Restarting with stat:2020-02-27 12:11:08,907
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:11:09,125
+ * Debugger is active!:2020-02-27 12:11:09,241
+ * Debugger PIN: 508-979-655:2020-02-27 12:11:09,246
+127.0.0.1 - - [27/Feb/2020 12:11:12] "GET / HTTP/1.1" 500 -:2020-02-27 12:11:12,029
+127.0.0.1 - - [27/Feb/2020 12:11:12] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:11:12,193
+127.0.0.1 - - [27/Feb/2020 12:11:12] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:11:12,196
+127.0.0.1 - - [27/Feb/2020 12:11:12] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:11:12,200
+127.0.0.1 - - [27/Feb/2020 12:11:12] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:11:12,392
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:12:42,373
+ * Restarting with stat:2020-02-27 12:12:42,448
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:13:06,537
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:13:06,686
+ * Restarting with stat:2020-02-27 12:13:06,687
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:13:06,919
+ * Debugger is active!:2020-02-27 12:13:07,039
+ * Debugger PIN: 508-979-655:2020-02-27 12:13:07,044
+127.0.0.1 - - [27/Feb/2020 12:13:19] "GET / HTTP/1.1" 500 -:2020-02-27 12:13:19,904
+127.0.0.1 - - [27/Feb/2020 12:13:20] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:13:20,045
+127.0.0.1 - - [27/Feb/2020 12:13:20] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:13:20,045
+127.0.0.1 - - [27/Feb/2020 12:13:20] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:13:20,046
+127.0.0.1 - - [27/Feb/2020 12:13:20] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:13:20,306
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:27:10,753
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:27:10,984
+ * Restarting with stat:2020-02-27 12:27:10,986
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:27:11,209
+ * Debugger is active!:2020-02-27 12:27:11,326
+ * Debugger PIN: 508-979-655:2020-02-27 12:27:11,332
+127.0.0.1 - - [27/Feb/2020 12:27:41] "GET / HTTP/1.1" 500 -:2020-02-27 12:27:41,869
+127.0.0.1 - - [27/Feb/2020 12:27:42] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:27:42,036
+127.0.0.1 - - [27/Feb/2020 12:27:42] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:27:42,037
+127.0.0.1 - - [27/Feb/2020 12:27:42] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:27:42,038
+127.0.0.1 - - [27/Feb/2020 12:27:42] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:27:42,393
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:29:28,569
+ * Restarting with stat:2020-02-27 12:29:28,652
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:29:28,985
+ * Debugger is active!:2020-02-27 12:29:29,197
+ * Debugger PIN: 508-979-655:2020-02-27 12:29:29,204
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:29:41,217
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:30:01,871
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:30:01,989
+ * Restarting with stat:2020-02-27 12:30:01,991
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:30:02,214
+ * Debugger is active!:2020-02-27 12:30:02,331
+ * Debugger PIN: 508-979-655:2020-02-27 12:30:02,337
+127.0.0.1 - - [27/Feb/2020 12:30:05] "GET / HTTP/1.1" 200 -:2020-02-27 12:30:05,312
+127.0.0.1 - - [27/Feb/2020 12:30:08] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:30:08,314
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:30:28,052
+ * Restarting with stat:2020-02-27 12:30:28,172
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:30:28,476
+ * Debugger is active!:2020-02-27 12:30:28,628
+ * Debugger PIN: 508-979-655:2020-02-27 12:30:28,634
+127.0.0.1 - - [27/Feb/2020 12:30:31] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:30:31,410
+127.0.0.1 - - [27/Feb/2020 12:30:37] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:30:37,690
+127.0.0.1 - - [27/Feb/2020 12:30:42] "GET / HTTP/1.1" 500 -:2020-02-27 12:30:42,955
+127.0.0.1 - - [27/Feb/2020 12:30:43] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:30:43,075
+127.0.0.1 - - [27/Feb/2020 12:30:43] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:30:43,075
+127.0.0.1 - - [27/Feb/2020 12:30:43] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:30:43,125
+127.0.0.1 - - [27/Feb/2020 12:30:43] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:30:43,271
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:30:50,156
+ * Restarting with stat:2020-02-27 12:30:50,213
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:30:50,532
+ * Debugger is active!:2020-02-27 12:30:50,727
+ * Debugger PIN: 508-979-655:2020-02-27 12:30:50,733
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:30:53,823
+ * Restarting with stat:2020-02-27 12:30:53,898
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:30:54,179
+ * Debugger is active!:2020-02-27 12:30:54,321
+ * Debugger PIN: 508-979-655:2020-02-27 12:30:54,326
+127.0.0.1 - - [27/Feb/2020 12:30:58] "GET / HTTP/1.1" 500 -:2020-02-27 12:30:58,462
+127.0.0.1 - - [27/Feb/2020 12:30:58] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:30:58,570
+127.0.0.1 - - [27/Feb/2020 12:30:58] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:30:58,571
+127.0.0.1 - - [27/Feb/2020 12:30:58] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:30:58,631
+127.0.0.1 - - [27/Feb/2020 12:30:58] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:30:58,799
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:31:14,810
+ * Restarting with stat:2020-02-27 12:31:14,867
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:31:15,091
+ * Debugger is active!:2020-02-27 12:31:15,208
+ * Debugger PIN: 508-979-655:2020-02-27 12:31:15,213
+127.0.0.1 - - [27/Feb/2020 12:31:17] "GET / HTTP/1.1" 200 -:2020-02-27 12:31:17,318
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:34:49,777
+ * Restarting with stat:2020-02-27 12:34:49,845
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:34:50,463
+ * Debugger is active!:2020-02-27 12:34:50,690
+ * Debugger PIN: 508-979-655:2020-02-27 12:34:50,696
+127.0.0.1 - - [27/Feb/2020 12:34:52] "GET / HTTP/1.1" 200 -:2020-02-27 12:34:52,757
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:35:09,218
+ * Restarting with stat:2020-02-27 12:35:09,299
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:35:09,590
+ * Debugger is active!:2020-02-27 12:35:09,826
+ * Debugger PIN: 508-979-655:2020-02-27 12:35:09,832
+127.0.0.1 - - [27/Feb/2020 12:35:12] "GET / HTTP/1.1" 500 -:2020-02-27 12:35:12,766
+127.0.0.1 - - [27/Feb/2020 12:35:12] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:35:12,945
+127.0.0.1 - - [27/Feb/2020 12:35:12] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:35:12,946
+127.0.0.1 - - [27/Feb/2020 12:35:12] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:35:12,994
+127.0.0.1 - - [27/Feb/2020 12:35:13] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -:2020-02-27 12:35:13,061
+127.0.0.1 - - [27/Feb/2020 12:35:13] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:35:13,232
+127.0.0.1 - - [27/Feb/2020 12:38:36] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:38:36,309
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:46:27,634
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:46:27,861
+ * Restarting with stat:2020-02-27 12:46:27,862
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:46:28,097
+ * Debugger is active!:2020-02-27 12:46:28,213
+ * Debugger PIN: 508-979-655:2020-02-27 12:46:28,220
+127.0.0.1 - - [27/Feb/2020 12:46:31] "GET /schedule HTTP/1.1" 500 -:2020-02-27 12:46:31,518
+127.0.0.1 - - [27/Feb/2020 12:46:31] "GET /schedule?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:46:31,686
+127.0.0.1 - - [27/Feb/2020 12:46:31] "GET /schedule?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:46:31,693
+127.0.0.1 - - [27/Feb/2020 12:46:31] "GET /schedule?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:46:31,694
+127.0.0.1 - - [27/Feb/2020 12:46:31] "GET /schedule?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -:2020-02-27 12:46:31,898
+127.0.0.1 - - [27/Feb/2020 12:46:31] "GET /schedule?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:46:31,998
+127.0.0.1 - - [27/Feb/2020 12:46:32] "GET /schedule?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:46:32,027
+127.0.0.1 - - [27/Feb/2020 12:46:53] "GET /schedule HTTP/1.1" 500 -:2020-02-27 12:46:53,922
+127.0.0.1 - - [27/Feb/2020 12:46:54] "GET /schedule?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:46:54,048
+127.0.0.1 - - [27/Feb/2020 12:46:54] "GET /schedule?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:46:54,049
+127.0.0.1 - - [27/Feb/2020 12:46:54] "GET /schedule?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:46:54,050
+127.0.0.1 - - [27/Feb/2020 12:46:54] "GET /schedule?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:46:54,258
+127.0.0.1 - - [27/Feb/2020 12:47:24] "GET /schedule HTTP/1.1" 500 -:2020-02-27 12:47:24,541
+127.0.0.1 - - [27/Feb/2020 12:47:24] "GET /schedule?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:47:24,679
+127.0.0.1 - - [27/Feb/2020 12:47:24] "GET /schedule?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:47:24,679
+127.0.0.1 - - [27/Feb/2020 12:47:24] "GET /schedule?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:47:24,680
+127.0.0.1 - - [27/Feb/2020 12:47:24] "GET /schedule?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:47:24,923
+127.0.0.1 - - [27/Feb/2020 12:47:29] "GET / HTTP/1.1" 500 -:2020-02-27 12:47:29,256
+127.0.0.1 - - [27/Feb/2020 12:47:29] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:47:29,435
+127.0.0.1 - - [27/Feb/2020 12:47:29] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:47:29,441
+127.0.0.1 - - [27/Feb/2020 12:47:29] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:47:29,441
+127.0.0.1 - - [27/Feb/2020 12:47:29] "GET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -:2020-02-27 12:47:29,505
+127.0.0.1 - - [27/Feb/2020 12:47:29] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:47:29,678
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:47:36,886
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:47:37,119
+ * Restarting with stat:2020-02-27 12:47:37,121
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:47:37,356
+ * Debugger is active!:2020-02-27 12:47:37,467
+ * Debugger PIN: 508-979-655:2020-02-27 12:47:37,473
+127.0.0.1 - - [27/Feb/2020 12:47:39] "GET / HTTP/1.1" 500 -:2020-02-27 12:47:39,993
+127.0.0.1 - - [27/Feb/2020 12:47:40] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:47:40,101
+127.0.0.1 - - [27/Feb/2020 12:47:40] "GET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:47:40,101
+127.0.0.1 - - [27/Feb/2020 12:47:40] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:47:40,101
+127.0.0.1 - - [27/Feb/2020 12:47:40] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:47:40,368
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:47:55,912
+ * Restarting with stat:2020-02-27 12:47:56,040
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:47:56,347
+ * Debugger is active!:2020-02-27 12:47:56,551
+ * Debugger PIN: 508-979-655:2020-02-27 12:47:56,566
+127.0.0.1 - - [27/Feb/2020 12:47:57] "GET / HTTP/1.1" 200 -:2020-02-27 12:47:57,073
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 12:48:21,130
+ * Restarting with stat:2020-02-27 12:48:21,183
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:49:06,167
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 12:49:06,300
+ * Restarting with stat:2020-02-27 12:49:06,301
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 12:49:06,538
+ * Debugger is active!:2020-02-27 12:49:06,674
+ * Debugger PIN: 508-979-655:2020-02-27 12:49:06,679
+127.0.0.1 - - [27/Feb/2020 12:49:09] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:49:09,367
+127.0.0.1 - - [27/Feb/2020 12:50:02] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:50:02,433
+127.0.0.1 - - [27/Feb/2020 12:51:09] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:51:09,490
+127.0.0.1 - - [27/Feb/2020 12:51:26] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:51:26,480
+127.0.0.1 - - [27/Feb/2020 12:51:58] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:51:58,740
+127.0.0.1 - - [27/Feb/2020 12:52:45] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:52:45,069
+127.0.0.1 - - [27/Feb/2020 12:53:20] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:53:20,708
+127.0.0.1 - - [27/Feb/2020 12:54:08] "GET /schedule HTTP/1.1" 500 -:2020-02-27 12:54:08,916
+127.0.0.1 - - [27/Feb/2020 12:54:09] "GET /schedule?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:54:09,160
+127.0.0.1 - - [27/Feb/2020 12:54:09] "GET /schedule?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:54:09,165
+127.0.0.1 - - [27/Feb/2020 12:54:09] "GET /schedule?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:54:09,167
+127.0.0.1 - - [27/Feb/2020 12:54:09] "GET /schedule?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -:2020-02-27 12:54:09,289
+127.0.0.1 - - [27/Feb/2020 12:54:09] "GET /schedule?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:54:09,505
+127.0.0.1 - - [27/Feb/2020 12:54:15] "GET /schedule HTTP/1.1" 500 -:2020-02-27 12:54:15,493
+127.0.0.1 - - [27/Feb/2020 12:54:15] "GET /schedule?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -:2020-02-27 12:54:15,719
+127.0.0.1 - - [27/Feb/2020 12:54:15] "GET /schedule?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -:2020-02-27 12:54:15,724
+127.0.0.1 - - [27/Feb/2020 12:54:15] "GET /schedule?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -:2020-02-27 12:54:15,726
+127.0.0.1 - - [27/Feb/2020 12:54:15] "GET /schedule?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -:2020-02-27 12:54:15,940
+127.0.0.1 - - [27/Feb/2020 12:55:12] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:55:12,439
+127.0.0.1 - - [27/Feb/2020 12:55:45] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:55:45,213
+127.0.0.1 - - [27/Feb/2020 12:56:43] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:56:43,728
+127.0.0.1 - - [27/Feb/2020 12:56:55] "GET /schedule HTTP/1.1" 200 -:2020-02-27 12:56:55,548
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 13:07:43,283
+ * Running on http://127.0.0.1:5001/ (Press CTRL+C to quit):2020-02-27 13:07:43,516
+ * Restarting with stat:2020-02-27 13:07:43,519
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 13:07:43,746
+ * Debugger is active!:2020-02-27 13:07:43,866
+ * Debugger PIN: 508-979-655:2020-02-27 13:07:43,872
+127.0.0.1 - - [27/Feb/2020 13:07:58] "GET /schedule HTTP/1.1" 200 -:2020-02-27 13:07:58,544
+127.0.0.1 - - [27/Feb/2020 13:08:09] "GET / HTTP/1.1" 200 -:2020-02-27 13:08:09,088
+127.0.0.1 - - [27/Feb/2020 13:08:12] "GET /schedule HTTP/1.1" 200 -:2020-02-27 13:08:12,002
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 13:09:22,198
+ * Restarting with stat:2020-02-27 13:09:22,273
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 13:09:22,711
+ * Debugger is active!:2020-02-27 13:09:22,916
+ * Debugger PIN: 508-979-655:2020-02-27 13:09:22,922
+127.0.0.1 - - [27/Feb/2020 13:09:24] "GET /schedule HTTP/1.1" 200 -:2020-02-27 13:09:24,455
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-27 13:27:14,624
+ * Restarting with stat:2020-02-27 13:27:14,713
+User: Smith, John, Activity: log in, Date/Time :2020-02-27 13:27:15,097
+ * Debugger is active!:2020-02-27 13:27:15,290
+ * Debugger PIN: 508-979-655:2020-02-27 13:27:15,296
+127.0.0.1 - - [27/Feb/2020 13:27:15] "GET /schedule HTTP/1.1" 200 -:2020-02-27 13:27:15,584
+127.0.0.1 - - [27/Feb/2020 13:28:09] "GET /schedule HTTP/1.1" 200 -:2020-02-27 13:28:09,156
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-28 11:39:45,433
+ * Restarting with stat:2020-02-28 11:39:45,568
+User: Smith, John, Activity: log in, Date/Time :2020-02-28 11:39:46,001
+ * Debugger is active!:2020-02-28 11:39:46,241
+ * Debugger PIN: 508-979-655:2020-02-28 11:39:46,248
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-28 11:52:21,932
+ * Restarting with stat:2020-02-28 11:52:22,039
+User: Smith, John, Activity: log in, Date/Time :2020-02-28 11:52:22,405
+ * Debugger is active!:2020-02-28 11:52:22,654
+ * Debugger PIN: 508-979-655:2020-02-28 11:52:22,664
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-28 11:52:23,693
+ * Restarting with stat:2020-02-28 11:52:23,751
+User: Smith, John, Activity: log in, Date/Time :2020-02-28 11:52:24,011
+ * Debugger is active!:2020-02-28 11:52:24,479
+ * Debugger PIN: 508-979-655:2020-02-28 11:52:24,494
+ * Detected change in '/Users/mgates/Desktop/CS490/repository/BradleyQPI/app.py', reloading:2020-02-28 11:58:07,565
+ * Restarting with stat:2020-02-28 11:58:07,662
+User: Smith, John, Activity: log in, Date/Time :2020-02-28 11:58:08,026
+ * Debugger is active!:2020-02-28 11:58:08,250
+ * Debugger PIN: 508-979-655:2020-02-28 11:58:08,255

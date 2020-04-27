@@ -1,0 +1,248 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css" />
+	<link href="https://cdn.datatables.net/rowgroup/1.0.2/css/rowGroup.dataTables.min.css" rel="stylesheet"
+		type="text/css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet"
+		type="text/css">
+	<!-- <link href="/../UI-Dropdown-master/dropdown.css" rel="stylesheet" type="text/css" />
+	<link href="/../UI-Dropdown-master/dropdown.min.css" rel="stylesheet" type="text/css" /> -->
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+	<script type="text/javascript"
+		src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js"></script>
+	<script src="https://cdn.datatables.net/rowgroup/1.0.2/js/dataTables.rowGroup.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"> </script>
+	<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.flash.min.js"> </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"> </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"> </script>
+	<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
+	<!-- <script type="text/javascript" src="/../UI-Dropdown-master/dropdown.js"></script>
+	<script type="text/javascript" src="UI-Dropdown-master/dropdown.min.js"></script>-->
+
+	<style>
+		td {
+			width: 150px;
+			padding: 5px
+		}
+
+		p {
+			font-size: 16px;
+		}
+
+		.dataTables_wrapper .dt-buttons {
+			float: none;
+			text-align: right;
+		}
+
+		caption {
+			caption-side: top;
+			width: auto;
+			text-align: left;
+			color: black;
+			font-size: 15px;
+			padding-top: 0px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="list-group pt-2 text-black">
+		<a class="list-group-item list-group-item-action flex-column align-items-start active" style="width:100%">
+			<div class="d-flex w-100 justify-content-between">
+				<h3 class="mb-1" style="color:white">Master Shift Calendar</h3>
+			</div>
+		</a>
+		<div class="jumbotron" style="padding: 0rem 2rem; margin-bottom: 5px">
+			<div class="row">
+				<div class="col-sm" style="padding-top:2rem">
+					<div style="color:black"> Select Date: </div>
+					<input type="text" name="daterange" id="dates"
+						style="border-radius: 0.25rem; padding-left:15px; height: 35px; min-width:150px; max-width: 300px" />
+				</div>
+				<div class="col-sm" style="padding-top:2rem">
+					<div class="form-group">
+						<div style="color:black"> Select Shift: </div>
+						<select class="form-control" id="shiftTime" style="min-width:100px; max-width: 300px">
+							<option hidden> Select One</option>
+							<option value="1">First Shift </option>
+							<option value="2">Second Shift </option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm" style="padding-top:2rem">
+					<div class="form-group">
+						<div style="color:black"> Select Role: </div>
+						<select class="form-control" id="roleType" style="min-width:100px; max-width: 300px">
+							<option hidden> Select One</option>
+							<option value="2">Production</option>
+							<option value="6">Production Management</option>
+							<option value="4">Line Leader </option>
+							<option value="3">Thermoform Department</option>
+							<option value="5">Print/Die Cut </option>
+
+						</select>
+					</div>
+				</div>
+				<div class="col-sm" style="padding-top:3.25rem">
+					<button type="submit" class="btn btn-primary" id="viewSchedule">View Schedule</button>
+				</div>
+			</div>
+			<br>
+		</div>
+		<div class="jumbotron" style="padding: 1rem 2rem;">
+
+			<table class="display" id="schedule" name="dataTable" style="width:100%;">
+				<caption id="tableCaption">  </caption>
+
+				<thead>
+					<tr>
+						<th>Employee</th>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Shift</th>
+						<th>Role</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	
+    <form action="" id="generateSchedule" method="post">
+
+	<script>
+		var startDate
+		var endDate
+		$(function () {
+			//creates date range picker dropdown 
+			$('input[name="daterange"]').daterangepicker({
+				opens: 'right',
+				singleDatePicker: true,
+				showDropdowns: true,
+			}, 
+			function(start, end) {
+				console.log("Callback has been called!");
+				$('#daterange').html(start.format('D MMMM YYYY') + ' - ' + end.format('D MMMM YYYY'));
+				startDate = start;
+				endDate = end;  
+			}  
+			); 
+		});
+		
+		$(function () {
+			//creates schedule based on selected parameters 
+			var table = $('table#schedule').DataTable({
+				dom: 'Bfrtip',
+				buttons: [
+					'csv', 'excel', 'print',
+				],
+				"rowCallback": function (row, data, dataIndex) {
+					if (data[2] == 'Morning') {
+						console.log(data[2]);
+						$('td', row).eq(2).attr('data-order', 1); //setter
+					}
+					else if (data[2] == 'Mid-Morning') {
+						$('td', row).eq(2).attr('order', 2); //setter
+					}
+					else if (data[2] == 'Afternoon') {
+						$('td', row).eq(2).attr('data-order', 3); //setter
+					}
+					else if (data[2] == 'Evening') {
+						$('td', row).eq(2).attr('data-order', 4); //setter
+					}
+					else {
+						$('td', row).eq(2).attr('data-order', -1); //setter
+					}
+				},
+				"columnDefs": [
+					{ "orderData": [1, 2, 3], "targets": 0 },
+					{ "orderData": [1, 2, 3], "targets": 1 },
+					{ "orderData": [1, 2, 3], "targets": 2 },
+					{ "orderData": [1, 2, 3], "targets": 3 },
+				],
+				"paging": true,
+				"ordering": true,
+				order: [[1, 'asc']],
+				"info": true,
+				"searching": false,
+				responsive: true,
+				"language": {
+                    "emptyTable": " "
+                },
+			}).draw(false); 
+		});
+		$('#viewSchedule').click(function () {
+			
+			var role = document.getElementById("roleType")
+			var shift = document.getElementById("shiftTime")
+			var caption = document.getElementById("tableCaption")
+			
+			var selectedRole = role.options[role.selectedIndex].value
+			var selectedShift = shift.options[shift.selectedIndex].value
+			var selectedShiftName = shift.options[shift.selectedIndex].text
+
+
+			//Set table caption 
+			caption.innerHTML = "Date: " + startDate.format('D MMMM YYYY')+ " | Shift: " + selectedShiftName + " | Role: " + role.options[role.selectedIndex].text
+
+			var table = $('#schedule').DataTable();
+			//clear current data in table 
+			table.clear();
+			table.draw();
+
+		//when the button is clicked,  calls a fetch to return all employees who work at that time 
+			//corresponds to @app.route('/employee/<orig_shift>') in app.py 
+			fetch('/mastercal/' + startDate + '/'+ selectedShift + '/'+ selectedRole).then(response => response.json())
+				.then(data => {
+
+					for (var key in data){
+						for(var val in data[key]){
+							table.row.add(
+								[
+									(data[key][val]["first_name"] + " "+ data[key][val]["last_name"]), 
+									data[key][val]["shift_date"],
+									(data[key][val]["start_time"] +" - " + data[key][val]["end_time"]),
+									data[key][val]["first_or_second"], 
+									role.options[role.selectedIndex].text
+								]
+							).draw(false);
+						}
+					}
+					
+				})
+
+		});
+		
+	</script>
+
+</body>
+
+</html>
+{% endblock %}

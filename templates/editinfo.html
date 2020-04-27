@@ -1,0 +1,36 @@
+{% extends 'layout.html' %} {% block body %}
+<div>
+  <div
+    class="jumbotron"
+    style="padding: 2rem 2rem; width: 400px; margin: auto;"
+  >
+    <h3>
+      Editing contact information for:
+      <br />{{user.first_name}} {{user.last_name}}
+    </h3>
+    <form method="POST" action="">
+      {% from "includes/_formhelper.html" import render_field %}
+      <form method="POST" action="">
+        <div class="form-group">
+          {{render_field(form.email, class_="form-control", value=user.email)}}
+        </div>
+        <div class="form-group">
+          {{render_field(form.phone, class_="form-control", value=user.phone)}}
+        </div>
+        <input
+          type="button"
+          name="submit_button mr-1"
+          class="btn btn-primary"
+          value="Submit"
+        />
+        <a class="btn btn-primary mr-1" href="/verifyemail" role="button"
+          >Verify Email</a
+        >
+        <a class="btn btn-primary mr-1" href="/settings" role="button"
+          >Settings</a
+        >
+      </form>
+    </form>
+  </div>
+</div>
+{% endblock %}
